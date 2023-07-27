@@ -14,13 +14,15 @@ body {
 }
 
 .container {
-    width: 20em;
+    width: 90%; /* Adjusted width for mobile view */
+    max-width: 400px; /* Maximum width for larger screens */
     background-color: rgb(255, 255, 255);
     overflow: hidden;
     border-radius: 1em;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1em;
+    margin: 1em; /* Added some margin for spacing */
 }
 
 .user-image {
@@ -136,11 +138,10 @@ a:last-child {
     text-indent: 0;
 }
 
-/* Media Queries for iPhone 13 (Portrait) */
-@media only screen and (max-device-width: 428px) {
+/* Media Queries for mobile view */
+@media only screen and (max-width: 600px) {
     /* Adjust styles for smaller screens */
     .container {
-        width: 18em;
         font-size: 0.9em;
     }
     
@@ -151,23 +152,5 @@ a:last-child {
     
     a {
         font-size: 1.5em;
-    }
-}
-
-/* Media Queries for iPhone 13 (Landscape) */
-@media only screen and (max-device-width: 926px) and (orientation: landscape) {
-    /* Adjust styles for landscape mode */
-    .container {
-        width: 25em;
-        font-size: 1.2em;
-    }
-    
-    .user-image img {
-        width: 8em;
-        height: 8em;
-    }
-    
-    a {
-        font-size: 2.5em;
     }
 }
